@@ -1,0 +1,138 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 3,
+    "passes": 3,
+    "pending": 0,
+    "failures": 0,
+    "start": "2023-12-07T00:52:37.541Z",
+    "end": "2023-12-07T00:53:03.758Z",
+    "duration": 26217,
+    "testsRegistered": 3,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "6672dd93-da91-4d4d-b135-ba8d125361d2",
+      "title": "",
+      "fullFile": "C:\\Users\\tuusu\\Desktop\\JoinClass Demo\\selenium\\test.js",
+      "file": "\\selenium\\test.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "4ac72d9e-afa7-4100-aeb8-45df6ea74946",
+          "title": "Testing Login",
+          "fullFile": "C:\\Users\\tuusu\\Desktop\\JoinClass Demo\\selenium\\test.js",
+          "file": "\\selenium\\test.js",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Testing de input de user",
+              "fullTitle": "Testing Login Testing de input de user",
+              "timedOut": false,
+              "duration": 7349,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "let driver = await new Builder().forBrowser('chrome').build();\n try {\n     await driver.get('http://localhost:3000/login');\n     await driver.findElement({ id: 'User' }).sendKeys('Samuel');\n     await driver.findElement({ className: 'button-submit' }).click();\n     // Espera a que aparezca el elemento con la clase 'swal2-title'\n     await driver.wait(until.elementLocated({ className: 'swal2-title' }));\n     const rellenarCampos = await driver.findElement({ id: 'swal2-title' }).getText();\n     driver\n .takeScreenshot()\n .then((image) => fs.writeFile(\"usuario.png\", image, \"base64\", (err) => {}));\n \n     assert.equal(rellenarCampos, 'El mensaje que esperas', 'Test exitoso');\n } catch (error) {\n     console.log(error);\n }  finally {\n   driver.quit();\n      }",
+              "err": {},
+              "uuid": "f15f72b4-c702-4642-bbdd-e92c0d420c72",
+              "parentUUID": "4ac72d9e-afa7-4100-aeb8-45df6ea74946",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Testing de input de password",
+              "fullTitle": "Testing Login Testing de input de password",
+              "timedOut": false,
+              "duration": 9652,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "let driver = await new Builder().forBrowser('chrome').build();\ntry {\n    await driver.get('http://localhost:3000/login');\n    await driver.findElement({ id: 'User' }).sendKeys('user');\n    await driver.findElement({ id: 'Contrasena' }).sendKeys('user');\n    await driver.findElement({ className: 'button-submit' }).click();\n    // Espera a que aparezca el elemento con la clase 'swal2-title'\n    await driver.wait(until.elementLocated({ className: 'swal2-title' }));\n    const incorrecto = await driver.findElement({ id: 'swal2-title' }).getText();\n    console.log(incorrecto)\n    driver\n  .takeScreenshot()\n  .then((image) => fs.writeFile(\"contraseña.png\", image, \"base64\", (err) => {}));\n  \n    assert.equal(incorrecto, 'Password y/o User incorrect', 'Test exitoso');\n} catch (error) {\n    console.log('Este es el error:',error);\n}  finally {\n  driver.quit();\n    }",
+              "err": {},
+              "uuid": "d03068d6-e07f-4aa5-9f8d-97723572f2e1",
+              "parentUUID": "4ac72d9e-afa7-4100-aeb8-45df6ea74946",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Testing de input de inicio",
+              "fullTitle": "Testing Login Testing de input de inicio",
+              "timedOut": false,
+              "duration": 9188,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "let driver = await new Builder().forBrowser('chrome').build();\ntry {\n    await driver.get('http://localhost:3000/login');\n    await driver.findElement({ id: 'User' }).sendKeys('pruebaItla');\n    await driver.findElement({ id: 'Contrasena' }).sendKeys('itla123456');\n    await driver.findElement({ className: 'button-submit' }).click();\n    // Espera a que aparezca el elemento con la clase 'swal2-title'\n    await driver.wait(until.elementLocated({ className: 'swal2-title' }));\n    const incorrecto = await driver.findElement({ id: 'swal2-title' }).getText();\n    console.log(incorrecto)\n    driver\n    .takeScreenshot()\n    .then((image) => fs.writeFile(\"inicio.png\", image, \"base64\", (err) => {}));\n    assert.equal(incorrecto, 'Inicio de sesión', 'Test exitoso');\n\n} catch (error) {\n    console.log('Este es el error:',error);\n} finally {\n    driver.quit();\n}",
+              "err": {},
+              "uuid": "c3c8d1f8-bffb-42fb-803f-4532ce0291eb",
+              "parentUUID": "4ac72d9e-afa7-4100-aeb8-45df6ea74946",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "f15f72b4-c702-4642-bbdd-e92c0d420c72",
+            "d03068d6-e07f-4aa5-9f8d-97723572f2e1",
+            "c3c8d1f8-bffb-42fb-803f-4532ce0291eb"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 26189,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 0
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 0
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "10.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": null,
+      "version": "6.2.0"
+    }
+  }
+}

@@ -1,0 +1,429 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.imgPrincipal{
+    border-radius: 10px;
+}
+
+/*Boton de wsp*/
+
+.bx-chevron-up{
+  border-radius: 100%;
+  width: 75px;
+  padding: 10px;
+  margin: 20px;
+}
+
+.navbar{background-color:rgba(251,176,63,255);}
+.btn{background-color: rgba(16,116,188,255);}
+
+.seccionPrincipal{margin-top: 100px;}
+
+/*Estilos para los servicios*/
+
+.servicios{margin-top: 200px;}
+
+.servicios1, .servicios2{
+  display: flex;
+  flex-direction: row;
+}
+
+
+.card2-title {
+  color: #262626;
+  font-size: 1.5em;
+  line-height: normal;
+  font-weight: 700;
+  margin-bottom: 0.5em;
+}
+
+.small-desc {
+  font-size: 1em;
+  font-weight: 400;
+  line-height: 1.5em;
+  color: #000000;
+}
+
+.small-desc {
+  font-size: 1em;
+}
+
+.go-corner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  width: 2em;
+  height: 2em;
+  overflow: hidden;
+  top: 0;
+  right: 0;
+  background: linear-gradient(-45deg, #333333 0%, #000000 100%);
+  border-radius: 0 4px 0 32px;
+}
+
+.go-arrow {
+  margin-top: -4px;
+  margin-right: -4px;
+  color: white;
+  font-family: courier, sans;
+}
+
+.card2 {
+  display: block;
+  position: relative;
+  max-width: 300px;
+  max-height: 320px;
+  background-color: #f2f8f9;
+  border-radius: 10px;
+  padding: 2em 1.2em;
+
+  text-decoration: none;
+  z-index: 0;
+  overflow: hidden;
+  background: linear-gradient(to bottom, #212529, #212529);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.card2:before {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  top: -16px;
+  right: -16px;
+  background: linear-gradient(-45deg, #333333 0%, #000000 100%);
+  height: 32px;
+  width: 32px;
+  border-radius: 32px;
+  transform: scale(1);
+  transform-origin: 50% 50%;
+  transition: transform 0.35s ease-out;
+}
+
+.card2:hover:before {
+  transform: scale(28);
+}
+
+.card2:hover .small-desc {
+  transition: all 0.5s ease-out;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.card2:hover .card-title {
+  transition: all 0.5s ease-out;
+  color: #ffffff;
+}
+
+
+/********************************/
+ul{
+    list-style: none;
+}
+
+
+.LogodeJoinClass{
+    margin-left: 150px;
+}
+
+.btns{
+  display: flex;
+  flex-direction: row;
+}
+
+/*Estilos para los servicios*/
+
+.servicio1{
+margin-left: auto;
+margin-right: auto;
+}
+
+.card1 {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 320px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  padding: 32px;
+  overflow: hidden;
+  border-radius: 10px;
+  background: #212121;
+  border: 2px solid #313131;
+  transition: all 0.5s cubic-bezier(0.23, 1, 0.320, 1);
+}
+
+.contents {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+  color: #e8e8e8;
+  transition: all 0.5s cubic-bezier(0.23, 1, 0.320, 1);
+}
+
+.contents .heading {
+  font-weight: 700;
+  font-size: 32px;
+}
+
+.contents .para {
+  line-height: 1.5;
+}
+
+.contents .btn {
+  color: #e8e8e8;
+  text-decoration: none;
+  padding: 10px;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  background: #0974f1;
+  border-radius: 5px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.card1:hover {
+  box-shadow: 0 0 20px rgba(9, 117, 241, 0.8);
+  border-color: #0974f1;
+}
+
+.contents .btn:hover {
+  outline: 2px solid #e8e8e8;
+  background: transparent;
+  color: #e8e8e8;
+}
+
+.contents .btn:active {
+  box-shadow: none;
+}
+
+
+
+/*Cards animadas para la seccion de "sobre nosotros"*/
+
+.aboutUs{
+margin-top: 200px;
+margin-left: 50px;
+}
+
+.card-container {
+  width: 300px;
+  height: 300px;
+  position: relative;
+  border-radius: 10px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+}
+
+.card {
+  width: 100%;
+  height: 100%;
+  border-radius: inherit;
+}
+
+.card .front-content {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1)
+}
+
+.card .front-content p {
+  font-size: 32px;
+  font-weight: 700;
+  opacity: 1;
+  background: linear-gradient(-45deg, #000000  0%, #1074bc 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1)
+}
+
+.card .content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 10px;
+  background: linear-gradient(-45deg, #ffb43c 0%, #000000 100%);
+  color: #e8e8e8;
+  padding: 20px;
+  line-height: 1.5;
+  border-radius: 5px;
+  pointer-events: none;
+  transform: translateY(-96%);
+  transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1);
+}
+
+.card .content .heading {
+  font-size: 32px;
+  font-weight: 700;
+}
+
+.card:hover .content {
+  transform: translateY(0);
+}
+
+.card:hover .front-content {
+  transform: translateY(30%);
+}
+
+.card:hover .front-content p {
+  opacity: 0;
+}
+
+footer{
+  margin-top: 100px;
+}
+
+
+/*Animaciones de la primera seccion*/
+
+.tituloPrincipal{
+    display: inline-block;
+    margin: 0 0.5rem;
+  
+    animation: backInDown; 
+    animation-duration: 2s; 
+  }
+
+  .parrafoPrincipal{
+    display: inline-block;
+    margin: 0 0.5rem;
+  
+    animation: backInDown; 
+    animation-duration: 3s; 
+  }
+
+  .btnPrincipal{
+    display: inline-block;
+    margin: 0 0.5rem;
+  
+    animation: backInDown; 
+    animation-duration: 4s; 
+  }
+
+  .imgPrincipal{
+    display: inline-block;
+    margin: 0 0.5rem;
+  
+    animation: backInDown; 
+    animation-duration: 2s; 
+  }
+
+  /*Formulario de contacto*/
+
+  .container {
+    max-width: 1170px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1.5em;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+.contacto{
+  margin-top: 100px;
+}
+
+.contact-wrapper {
+    box-shadow: 0 0 20px 0 rgba(255, 255, 255, .3);
+}
+
+.contact-wrapper > * {
+    padding: 1em;
+}
+
+.contact-form {
+    background: #222222;
+}
+
+.contact-form form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.contact-form form label {
+    display: block;
+}
+
+.contact-form form p {
+    margin: 0;
+    padding: 1em;
+}
+
+.contact-form form .block {
+    grid-column: 1 / 3;
+}
+
+.contact-form form button,
+.contact-form form input,
+.contact-form form textarea {
+    width: 100%;
+    padding: .7em;
+    border: none;
+    background: none;
+    outline: 0;
+    color: #fff;
+    border-bottom: 1px solid #ffb43c;
+}
+
+.contact-form form button {
+    background: #ffb43c;
+    border: 0;
+    text-transform: uppercase;
+    padding: 1em;
+}
+
+.contact-form form button:hover,
+.contact-form form button:focus {
+    background: #ffb43c;
+    color: #fff;
+    transition: background-color 1s ease-out;
+    outline: 0;
+}
+
+/* CONTACT INFO */
+.contact-info {
+    background: #ffb43c;
+}
+
+.contact-info h4, .contact-info ul, .contact-info p {
+    text-align: center;
+    margin: 0 0 1rem 0;
+}
+
+/* LARGE SIZE */
+@media(min-width: 700px) {
+    body {
+        padding: 0 4em;
+    }
+    .contact-wrapper {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+    }
+    .contact-wrapper > * {
+        padding: 2em;
+    }
+    .contact-info h4,
+    .contact-info ul,
+    .contact-info p {
+        text-align: left;
+    }
+}
+
+  footer{margin-top: 200px;}
